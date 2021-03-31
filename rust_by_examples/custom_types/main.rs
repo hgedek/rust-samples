@@ -79,7 +79,6 @@ impl Verbose {
     } 
 }
 
-
 enum Status {
     Rich,
     Poor
@@ -96,8 +95,24 @@ enum Number {
     Three
 }
 
+#[derive(Debug)]
+enum NewEnum {
+    One,
+    Two
+}
+
+impl NewEnum {
+    fn new() -> NewEnum {
+        NewEnum::One
+    }
+}
+
+
 fn main() {
-    
+  
+    let newEnum = NewEnum::new();
+    println!("{:?}", newEnum);
+
     let name = String::from("hakan");
     let age = 30;
     let person = Person { name, age };
